@@ -22,6 +22,20 @@
 
 * { box-sizing: border-box; }
 
+/* ---------- 深色主题：覆盖右侧内容区配色（侧边栏本为深色，无需变动） ---------- */
+html[data-theme="dark"] {
+  --paper: #17150f;
+  --paper-soft: #201d15;
+  --ink: #ece7da;
+  --ink-soft: #a39a86;
+  --line: #322d21;
+  --accent: var(--accent-bright);
+}
+
+/* 深色主题下两处硬编码浅色需要跟随翻转 */
+html[data-theme="dark"] .hero::before { color: rgba(245, 241, 232, 0.06); }
+html[data-theme="dark"] .project-stack li { background: #201d15; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -30,6 +44,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   line-height: 1.7;
+  transition: background-color 0.25s ease, color 0.25s ease;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -84,6 +99,29 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .monogram span { color: var(--accent-bright); }
 
 .menu-toggle { display: none; }
+
+.sidebar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--sidebar-line);
+  color: var(--sidebar-ink);
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  padding: 0.38rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover { color: var(--accent-bright); border-color: var(--accent-bright); }
 
 .sidebar-body {
   display: flex;

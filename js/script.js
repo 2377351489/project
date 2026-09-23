@@ -1,5 +1,25 @@
-// 页面交互脚本：项目渲染、侧边导航高亮、移动端菜单
+// 页面交互脚本：主题切换、项目渲染、侧边导航高亮、移动端菜单
 // 项目数据来自 projects-data.js（需先于本文件引入）
+
+// 主题切换：浅色/深色切换，localStorage 记住用户上一次选择
+function initTheme() {
+  const root = document.documentElement;
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+
+  const apply = function (theme) {
+    root.setAttribute("data-theme", theme);
+    btn.textContent = theme === "dark" ? "浅色" : "深色";
+  };
+
+  apply(localStorage.getItem("theme") === "dark" ? "dark" : "light");
+
+  btn.addEventListener("click", function () {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    apply(next);
+    localStorage.setItem("theme", next);
+  });
+}
 
 // 渲染项目列表：数据驱动，新增项目只需修改 projects-data.js
 function renderProjects() {
@@ -117,6 +137,7 @@ function initLightbox() {
   });
 }
 
+initTheme();
 renderProjects();
 initScrollSpy();
 initMenu();
