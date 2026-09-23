@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="小磊的个人作品集，展示软件工程、AI 辅助开发与 Web 应用项目。">
+  <title>小磊 · 个人作品集</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <a class="monogram" href="#top" aria-label="返回首页">XL<span>.</span></a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-body">菜单</button>
+        </div>
+        <div class="sidebar-body" id="sidebar-body">
+          <div class="profile-block">
+            <p class="eyebrow">PORTFOLIO / 2026</p>
+            <h1>小磊</h1>
+            <p class="role">软件工程在读<br>AI 辅助开发 · 大语言模型应用</p>
+            <p class="intro">关注 AI 辅助开发与大语言模型技术，持续学习前后端开发、数据可视化与 AI 应用构建。</p>
+          </div>
+
+          <div class="skill-block">
+            <p class="label">关注方向</p>
+            <ul class="skill-list">
+              <li>AI 辅助开发</li>
+              <li>大语言模型应用</li>
+              <li>前后端开发</li>
+              <li>数据可视化</li>
+            </ul>
+          </div>
+
+          <nav class="main-nav" aria-label="主导航">
+            <a class="nav-link" href="#projects"><span>01</span> 项目作品</a>
+            <a class="nav-link" href="#about"><span>02</span> 关于我</a>
+            <a class="nav-link" href="#contact"><span>03</span> 联系方式</a>
+          </nav>
+
+          <div class="sidebar-footer">
+            <a href="mailto:xiaolei@example.com">xiaolei@example.com</a>
+            <p>© 2026 XIAOLEI</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="top">
+      <section class="hero section-frame" id="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="section-kicker">你好，很高兴认识你 <span>↘</span></p>
+          <h2 id="hero-title">让想法<br><em>发生。</em></h2>
+          <p class="hero-description">我是一名正在探索设计与技术交叉点的创作者，喜欢从真实需求出发，制作有逻辑、有表现力的数字产品。</p>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <span>SCROLL</span>
+          <strong>↘</strong>
+        </div>
+      </section>
+
+      <section class="projects-section section-frame" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-kicker">Selected work / 精选项目</p>
+          <h2 id="projects-title">项目作品<span class="accent">.</span></h2>
+          <p class="section-note">从概念、设计到实现，记录每一次把问题变成作品的过程。</p>
+        </div>
+        <div class="project-list" id="project-list" aria-live="polite"></div>
+      </section>
+
+      <section class="about-section section-frame" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-kicker">A little about me / 认识我</p>
+          <h2 id="about-title">关于我<span class="accent">.</span></h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-statement">
+            <p>我是小磊，一名软件工程专业学生，目前主要关注 AI 辅助开发与大语言模型技术。</p>
+            <p>平时主要使用 Python、Java 和 TypeScript 进行项目开发，也在持续学习前后端开发、数据可视化和 AI 应用构建。</p>
+          </div>
+          <div class="about-details">
+            <dl class="profile-details">
+              <div><dt>姓名</dt><dd>小磊</dd></div>
+              <div><dt>专业</dt><dd>软件工程</dd></div>
+              <div><dt>所在地</dt><dd>中国 · 广州</dd></div>
+              <div><dt>状态</dt><dd>广州软件学院在读</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-frame" id="contact" aria-labelledby="contact-title">
+        <p class="section-kicker">Have a project in mind? / 保持联系</p>
+        <h2 id="contact-title">一起做点<br><em>有意思的事。</em></h2>
+        <a class="contact-link" href="mailto:xiaolei@example.com">xiaolei@example.com <span>↗</span></a>
+        <ul class="contact-more">
+          <li><a href="https://github.com/xiaolei-dev" target="_blank" rel="noopener">GitHub：xiaolei-dev</a></li>
+          <li><a href="https://xiaolei.dev" target="_blank" rel="noopener">个人主页：xiaolei.dev</a></li>
+          <li><span>微信：xiaolei</span></li>
+        </ul>
+        <div class="contact-bottom"><span>广州 · 中国</span><span>最后更新于 2026.09</span></div>
+      </section>
+    </main>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片放大预览" hidden>
+    <button class="lightbox-close" type="button" aria-label="关闭预览">×</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+  <script src="js/projects-data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
